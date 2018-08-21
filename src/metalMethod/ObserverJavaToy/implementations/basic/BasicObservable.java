@@ -26,10 +26,9 @@ public class BasicObservable implements Subject {
     public void register(Observer observer) {
         try {
             this.observers.add(observer);
-            System.out.println("New Observer registered to Subject");
         } catch (
                 Exception e) {
-            this.errorMessage("Can't register Observer to this Subject", e);
+            this.errorMessage("#### Can't register Observer to this Subject", e);
         }
     }
 
@@ -38,7 +37,7 @@ public class BasicObservable implements Subject {
         try {
             this.observers.remove(observer);
         } catch (Exception e) {
-            this.errorMessage("Observer not found in this Subject", e);
+            this.errorMessage("#### Observer not found in this Subject", e);
         }
     }
 
@@ -49,7 +48,7 @@ public class BasicObservable implements Subject {
                 o.setContent(this.content);
             }
         } catch (Exception e) {
-            this.errorMessage("Observers list is empty", e);
+            this.errorMessage("#### Observers list is empty", e);
         }
     }
 

@@ -27,8 +27,9 @@ public class BasicProgram {
             this.basicObservable.printUpdateStatus();
 
             this.basicObservable.register(new BasicObserver("Observer " + this.nameCount));
-            this.nameCount++;
+            System.out.println("New Observer registered to Subject");
 
+            this.nameCount++;
 
         }
 
